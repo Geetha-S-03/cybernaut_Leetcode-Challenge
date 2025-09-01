@@ -1,0 +1,15 @@
+class Solution {
+    public int differenceOfSum(int[] nums) {
+        int sum=0,sum1=0;
+        int[] temp=nums;
+        for(int i=0;i<nums.length;i++){
+            sum+=nums[i];
+        while(temp[i]!=0){
+            int last=temp[i]%10;
+            sum1+=last;
+            temp[i]=temp[i]/10;
+         }
+        }
+        return (sum-sum1);
+    }
+}
